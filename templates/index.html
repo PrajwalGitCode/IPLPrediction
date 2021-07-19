@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="main.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  </head>
+  <body>
+    
+
+
+<nav class="navbar navbar-light">
+  <h3>Innings Score Predictor for Indian Premier League (IPL)</h3>
+</nav>
+
+
+        <!-- Prediction Area -->
+        <div class="prediction-area">
+            <!-- Prediction Form -->
+            <div class='div2'>
+                <form action="{{ url_for('predict') }}" method="POST">
+                    <!-- Batting Team Dropdown -->
+                    <select class="form-input align-center" name="batting-team">
+                        <option value="none">Select a Batting team </option>
+                        <option value="Chennai Super Kings">Chennai Super Kings</option>
+                        <option value="Delhi Daredevils">Delhi Daredevils</option>
+                        <option value="Kings XI Punjab">Kings XI Punjab</option>
+                        <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+                        <option value="Mumbai Indians">Mumbai Indians</option>
+                        <option value="Rajasthan Royals">Rajasthan Royals</option>
+                        <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+                        <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+                    </select>
+
+
+                    <!-- Bowling Team Dropdown -->
+                    <select class="form-input align-center" name="bowling-team">
+                        <option value="none">Select a Bowling team</option>
+                        <option value="Chennai Super Kings">Chennai Super Kings</option>
+                        <option value="Delhi Daredevils">Delhi Daredevils</option>
+                        <option value="Kings XI Punjab">Kings XI Punjab</option>
+                        <option value="Kolkata Knight Riders">Kolkata Knight Riders</option>
+                        <option value="Mumbai Indians">Mumbai Indians</option>
+                        <option value="Rajasthan Royals">Rajasthan Royals</option>
+                        <option value="Royal Challengers Bangalore">Royal Challengers Bangalore</option>
+                        <option value="Sunrisers Hyderabad">Sunrisers Hyderabad</option>
+                    </select><br>
+                    </select><br>
+
+
+                    <input class="form-input" type="text" name="overs" placeholder="Overs (>= 5.0) eg. 7.2" ><br>
+                    <input class="form-input" type="text" name="runs" placeholder="Runs eg. 64"><br>
+                    <input class="form-input" type="text" name="wickets" placeholder="Wickets eg. 4"><br>
+                    <input class="form-input" type="text" name="runs_in_prev_5" placeholder="Runs scored in previous 5 Overs eg. 42"><br>
+                    <input class="form-input" type="text" name="wickets_in_prev_5" placeholder="Wickets taken in previous 5 Overs eg. 3"><br>
+
+			              <input type="submit" class="myButton" value="Predict Score">
+        	        </form>
+              </div>
+            </div>
+
+<footer>
+  <p>Made using Machine Learning </p>
+</footer>
+
+
+
+  </body>
+</html>
+<style>
+.navbar{
+  background-color:black;
+  color:whitesmoke;
+}
+
+.navbar h3{
+    padding-left:380px;
+}
+
+
+
+/* Prediction Area */
+.prediction-area{
+	position: relative;
+	display: flex;
+	justify-content: space-evenly;
+	padding: 20px 40px;
+  background-color: #020014;
+  padding-top:110px;
+  padding-bottom:115px;
+}
+
+
+
+.div2, .results{
+	display: inline-block;
+	width: auto;
+	height: 429px;
+	text-align: center;
+}
+
+
+/* Form */
+.form-input{
+	background-color: #E9E9E9;
+	width: 400px;
+	height: 40px;
+	border-radius: 3px;
+	border: 0;
+	text-align: center;
+	margin-bottom: 15px;
+  
+}
+
+.align-center{
+	padding: 0 30px;
+}
+
+footer {
+  text-align: center;
+  padding: 1px;
+  background-color:black;;
+  color: white;
+}
+
+
+/* Result */
+.results{
+  display: inline-block;
+  width: auto;
+  height: 429px;
+  line-height: 400px;
+  text-align: center;
+}
+
+</style>
+
