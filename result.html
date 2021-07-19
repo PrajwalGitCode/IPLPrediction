@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="main.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+  </head>
+  <body>
+    
+
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="background-color:black !important;">
+		<a class="navbar-brand mx-auto" href="#">Innings Score Predictor for Indian Premier League (IPL)</a>
+	</nav>
+
+
+<!-- Result --> 
+    <div class="results">
+      <h1>IPL Prediction</h1>
+      <h1>The final predicted score is in the range of: </h1>
+      <h1 class='result-p'> {{ lower_limit }} to {{ upper_limit }}</h1> 
+   </div>
+
+<footer>
+  <p>Made using Machine Learning </p>
+</footer>
+
+
+
+  </body>
+</html>
+
+<style>
+  .navbar{
+  background-color:black;
+  color:whitesmoke;
+}
+
+.navbar h3{
+    padding-left:380px;
+}
+
+
+
+/* Prediction Area */
+.prediction-area{
+	position: relative;
+	display: flex;
+	justify-content: space-evenly;
+	padding: 20px 40px;
+  background-color: #020014;
+  padding-top:110px;
+  padding-bottom:115px;
+  height:100vh
+}
+
+
+
+.div2, .results{
+	display: inline-block;
+	width: auto;
+	height: 429px;
+	text-align: center;
+}
+
+
+/* Form */
+.form-input{
+	background-color: #E9E9E9;
+	width: 400px;
+	height: 40px;
+	border-radius: 3px;
+	border: 0;
+	text-align: center;
+	margin-bottom: 15px;
+  
+}
+
+.align-center{
+	padding: 0 30px;
+}
+
+footer {
+  text-align: center;
+  padding: 4px;
+  background-color:black;;
+  color: white;
+}
+
+
+/* Result */
+.results{
+  display: inline-block;
+  width: 100%;
+  height:86vh;
+  line-height: 400px;
+  text-align: center;
+  background-color:#020014;
+  padding-top:110px; 
+  color:white;
+  height:100vh
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+.navbar-brand{
+  font-size:12px !important;
+}
+}
+
+
+
+
+</style>
